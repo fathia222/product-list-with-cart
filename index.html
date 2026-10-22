@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="dist/output.css">
+  
+  <title>Frontend Mentor | Product list with cart</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍
+  <style>
+    .attribution { font-size: 0.6875rem; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+</head>
+<body class="p-0 m-0 border-border-box bg-rose-50">
+<div class="grid grid-cols-1 lg:grid-cols-5 gap-3 p-6">
+  <div class="lg:col-span-3">
+ <h1 class="color-black text-3xl font-bold m-3 p-2 mb-4">Desserts</h1>
+
+
+  
+<div id="product-container" class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  "></div>
+
+</div>
+
+<aside id="cart" class="lg:col-span-2 m-5 rounded-2xl p-10 m-16 bg-white h-fit ">
+<h2 class="text-xl mb-3 font-bold  text-400 text-rose-500">Your Cart (<span id="cart-count">0</span>)</h2>
+
+<img id="empty-cart-img" src="assets/images/illustration-empty-cart.svg">
+ <!-- <p>Your added items will appear here</p>  -->
+
+
+ <div id="cart-items"></div>
+ <div class="flex justify-between font-bold mt-4">
+<span>Order Total</span>
+<span id="cart-total">$0.00</span>
+ </div>
+
+ <div id="cart-footer" class="hidden">
+  <p class="flex items-center justify-center gap-2 text-sm bg-rose-50 rounded-md p-3 my-4">
+    <img src="assets/images/icon-carbon-neutral.svg">
+    This is a <strong>carbon-neutral</strong> delivery
+  </p>
+  <button id="confirm-btn" class="w-full bg-red-600 text-white rounded-full py-3 font-semibold">Confirm Order</button>
+ </div>
+</aside>
+</div>
+
+<div id="order-modal" class="hidden fixed inset-0 bg-black/50 items-center justify-center z-50 p-4">
+  <div class="bg-white rounded-xl p-6 w-full max-w-md ">
+    <img src="assets/images/icon-order-confirmed.svg" alt="ordered successfully" class="mb-4">
+    <h2 class="text-3xl font-bold">Order Confirmed</h2>
+    <p class="text-gray-500 mb-4">We hope you enjoy your food</p>
+
+    <div id="order-items" class="bg-rose-50 rounded-md p-4"></div>
+    <button id="new-order-btn" class="w-full bg-red-600 text-white rounded-full py-3 font-semibold mt-6">Start New Order</button>
+  </div>
+</div>
+
+
+
+
+
+
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
